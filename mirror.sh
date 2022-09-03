@@ -13,7 +13,7 @@ if [ -z "${GITHUB_SERVER_URL}" ]; then
   GITHUB_SERVER_URL=https://github.com
 fi
 if [ -z "$GITHUB_REPOSITORY" ]; then
-  GITHUB_REPOSITORY="qyber-black/Info-SpinNet"
+  GITHUB_REPOSITORY="qyber-black/Info-Cancer"
 fi
 
 echo
@@ -24,7 +24,7 @@ wiki_dir="`basename $GITHUB_REPOSITORY.wiki`"
 echo
 echo "# Sync'ing with qyber wiki"
 cd "$wiki_dir"
-git remote add qyber https://qyber.black/spinnet/info-spinnet.wiki.git
+git remote add qyber https://qyber.black/ca/info-cancer.wiki.git
 git config --global user.email "frank@langbein.org"
 git config --global user.name "Frank C Langbein (via github actions)"
 git config pull.rebase true

@@ -1,0 +1,16 @@
+name: Mirror Qyber Wiki
+
+on:
+  schedule:
+    - cron: '30 3 15 * *'
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: mirror
+      run: ./mirror.sh
+      env:
+        WIKI_PERSONAL_ACCESS_TOKEN: ${{ secrets.WIKI_PERSONAL_ACCESS_TOKEN }}

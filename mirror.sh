@@ -24,7 +24,7 @@ wiki_dir="`basename $GITHUB_REPOSITORY.wiki`"
 echo
 echo "# Sync'ing with qyber wiki"
 cd "$wiki_dir"
-git remote add qyber https://qyber.black/ca/info-cancer.wiki.git
+git remote add qyber https://qyber.black/spinnet/info-spinnet.wiki.git
 git config --global user.email "frank@langbein.org"
 git config --global user.name "Frank C Langbein (via github actions)"
 git config pull.rebase true
